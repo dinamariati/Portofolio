@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dina Mariati | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#000000,#1b1b1b);
+color:white;
+display:flex;
+justify-content:center;
+padding:40px 20px;
+min-height:100vh;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:950px;
+width:100%;
+text-align:center;
+background:rgba(255,255,255,0.04);
+backdrop-filter:blur(10px);
+border-radius:25px;
+padding:40px;
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+animation:fadeUp 1s ease;
+}
+
+/* PHOTO */
+
+.photo img{
+width:220px;
+border-radius:50%;
+border:5px solid #ffd166;
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
+margin-bottom:20px;
+transition:0.4s;
+}
+
+.photo img:hover{
+transform:scale(1.05);
+box-shadow:0 25px 60px rgba(255,209,102,0.5);
+}
+
+/* NAME */
+
+h1{
+font-size:36px;
+margin-bottom:10px;
+letter-spacing:1px;
+}
+
+/* ABOUT */
+
+.about{
+max-width:650px;
+margin:auto;
+line-height:1.7;
+margin-bottom:35px;
+opacity:0.85;
+font-size:15px;
+}
+
+/* MENU */
+
+.menu{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-bottom:35px;
+}
+
+.menu button{
+background:linear-gradient(45deg,#ffd166,#ffb703);
+border:none;
+padding:10px 22px;
+border-radius:25px;
+cursor:pointer;
+font-weight:600;
+transition:0.3s;
+color:black;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.menu button:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* CONTENT */
+
+.section{
+display:none;
+animation:fadeUp 0.5s ease;
+}
+
+.section.active{
+display:block;
+}
+
+h2{
+margin-bottom:15px;
+color:#ffd166;
+letter-spacing:1px;
+}
+
+/* LIST */
+
+ul{
+list-style:none;
+padding:0;
+}
+
+ul li{
+padding:8px 0;
+border-bottom:1px solid rgba(255,255,255,0.1);
+opacity:0.9;
+}
+
+/* SKILLS */
+
+.skills{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-top:15px;
+}
+
+.skills img{
+width:60px;
+background:white;
+padding:10px;
+border-radius:14px;
+transition:0.3s;
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
+
+.skills img:hover{
+transform:translateY(-5px) scale(1.08);
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:18px;
+margin-top:20px;
+}
+
+.projects img{
+width:100%;
+border-radius:14px;
+cursor:pointer;
+transition:0.35s;
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.projects img:hover{
+transform:scale(1.07);
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* RESPONSIVE */
+
+@media(max-width:600px){
+
+.container{
+padding:25px;
+}
+
+.photo img{
+width:170px;
+}
+
+h1{
+font-size:28px;
+}
+
+.about{
+font-size:14px;
+}
+
+.menu button{
+padding:8px 16px;
+font-size:13px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- FOTO -->
+<div class="photo">
+<img src="Dinamariati.png">
+</div>
+
+<!-- NAMA -->
+<h1>Dina Mariati</h1>
+
+<!-- ABOUT -->
+<p class="about">
+Hi, I'm Dina Mariati, a graphic designer with more than 3 years of experience
+in visual communication. I specialize in flyer design, brand identity,
+wedding visual concepts, and digital promotional materials.
+</p>
+
+<!-- MENU -->
+<div class="menu">
+
+<button onclick="showSection('experience')">Experience</button>
+<button onclick="showSection('skills')">Skills</button>
+<button onclick="showSection('projects')">Projects</button>
+
+</div>
+
+<!-- EXPERIENCE -->
+
+<div class="section" id="experience">
+<h2>Experience</h2>
+<ul>
+<li>Graphic Designer (2022 - 2025)</li>
+<li>Freelance Wedding Designer (2025 - 2026)</li>
+</ul>
+</div>
+
+<!-- SKILLS -->
+
+<div class="section" id="skills">
+<h2>Skills</h2>
+
+<div class="skills">
+<img src="FIGMA.png">
+<img src="PSD.jfif">
+<img src="CDR.jfif">
+<img src="CANVA.jfif">
+<img src="premier.png">
+<img src="CAPCUT.jfif">
+</div>
+
+</div>
+
+<!-- PROJECTS -->
+
+<div class="section" id="projects">
+
+<h2>Projects</h2>
+
+<div class="projects">
+<img src="Project1.png">
+<img src="Project2.png">
+<img src="Project3.png">
+<img src="Project4.jpeg">
+<img src="Project5.png">
+<img src="Project6.png">
+<img src="Project7.png">
+<img src="Project8.jpeg">
+<img src="Project9.jpeg">
+<img src="Project10.jpeg">
+<img src="Project11.png">
+<img src="Project12.png">
+<img src="Project13.jpeg">
+<img src="Project14.jpeg">
+<img src="Project15.png">
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+function showSection(id){
+
+document.querySelectorAll(".section")
+.forEach(sec=>sec.classList.remove("active"));
+
+document.getElementById(id)
+.classList.add("active");
+
+}
+
+</script>
+
+</body>
+</html>
